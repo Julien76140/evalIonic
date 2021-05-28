@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item *ngFor="let item of data.oeuvre">
+      <p>{{item.nom}}</p><br/>
+      <img src={{item.image}} width="25%"><br>
+
+      <p>Notes:</p>
+      <div *ngIf="item.note == '1'">
+        <ion-icon name="star"></ion-icon>
+
+      </div>
+      <div *ngIf="item.note == '2'">
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+
+      </div>
+      <div *ngIf="item.note == '3'">
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+
+      </div>
+      <div *ngIf="item.note == '4'">
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+      </div>
+      <div *ngIf="item.note == '5'">
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+      </div>
+  </ion-item>
+
+</ion-content>

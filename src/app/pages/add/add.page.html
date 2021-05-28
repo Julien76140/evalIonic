@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>add</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form [formGroup]="oeuvreGroup" (ngSubmit)="sendData()" *ngIf="oeuvreGroup">
+    <ion-item>
+      <ion-label>Nom</ion-label>
+      <ion-input formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+   <ion-label>Image</ion-label>
+      <ion-input formControlName="image"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Note</ion-label>
+      <ion-range min="1" max="5" pin="true" snaps="true" color="secondary" formControlName="note">
+          <ion-label slot="start">1</ion-label>
+          <ion-label slot="end">5</ion-label>
+      </ion-range>
+  </ion-item>
+  <ion-button type="submit" expand="full">Enregistrer</ion-button>
+
+  </form>
+</ion-content>
